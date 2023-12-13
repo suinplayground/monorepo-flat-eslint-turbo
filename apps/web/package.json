@@ -1,18 +1,19 @@
 {
-  "name": "web",
+  "name": "@repo/web",
   "version": "1.0.0",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint . --max-warnings 0"
+    "start": "next start"
   },
   "dependencies": {
     "@repo/ui": "*",
     "next": "^14.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.2",

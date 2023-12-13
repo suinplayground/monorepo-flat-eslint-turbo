@@ -1,0 +1,12 @@
+{
+  "name": "@repo/hello-world",
+  "version": "0.0.0-development",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "engines": {
+    "node": ">=21"
+  }
+}

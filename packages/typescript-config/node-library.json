@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node Library",
+  "extends": "./node.json",
+  "compilerOptions": {
+    "declaration": true,
+    "inlineSourceMap": true,
+    "declarationMap": true
+  }
+}

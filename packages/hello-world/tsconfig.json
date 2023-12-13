@@ -1,0 +1,7 @@
+{
+  "extends": "@repo/typescript-config/node-library.json",
+  "compilerOptions": {
+    "outDir": "./js"
+  },
+  "include": ["ts"]
+}

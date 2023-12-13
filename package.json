@@ -1,24 +1,35 @@
 {
-  "name": "monorepo-flat-eslint-turbo",
+  "name": "@repo/root",
+  "version": "0.0.0",
   "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "FORCE_COLOR=1 turbo lint --concurrency 1",
+    "lint:eslint": "eslint --max-warnings=0 .",
+    "lint:package-json": "npmPkgJsonLint --maxWarnings=0 ."
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@types/eslint": "^8",
+    "eslint": "^8.55.0",
+    "eslint-plugin-comment-length": "^1.7.2",
+    "npm-package-json-lint": "^7.1.0",
     "prettier": "^3.1.0",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
   },
+  "packageManager": "yarn@4.0.2",
   "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "yarn@3.2.4",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+    "node": ">=21"
+  }
 }

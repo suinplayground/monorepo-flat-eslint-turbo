@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node",
+  "extends": "./strictest.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "node16",
+    "moduleResolution": "node16"
+  }
+}

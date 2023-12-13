@@ -2,13 +2,14 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
+  "license": "UNLICENSED",
   "exports": {
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "dev": "tsc --watch",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
@@ -21,6 +22,6 @@
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.53.0",
     "react": "^18.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   }
 }

@@ -2,16 +2,22 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
+    "prelint": {
+      "outputs": ["js"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
+    "//#lint:eslint": {
+      "dependsOn": ["^prelint"],
+      "cache": false
+    },
+    "//#lint:package-json": {
+      "outputs": []
+    },
+    "//#lint": {
+      "outputs": [],
+      "dependsOn": ["lint:eslint", "lint:package-json"]
     },
     "dev": {
-      "cache": false,
-      "persistent": true
+      "cache": false
     }
   }
 }

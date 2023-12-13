@@ -1,3 +1,11 @@
 {
-  "extends": "@repo/typescript-config/base.json"
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "module": "node16",
+    "moduleResolution": "node16",
+    "noEmit": true
+  },
+  "exclude": ["apps", "packages"]
 }
